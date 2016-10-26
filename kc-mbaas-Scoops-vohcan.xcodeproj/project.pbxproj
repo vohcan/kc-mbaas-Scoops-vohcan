@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D3D50F591DC09D0700812603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F581DC09D0700812603 /* AppDelegate.swift */; };
-		D3D50F5B1DC09D0700812603 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F5A1DC09D0700812603 /* ViewController.swift */; };
 		D3D50F5E1DC09D0700812603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D50F5C1DC09D0700812603 /* Main.storyboard */; };
 		D3D50F601DC09D0700812603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D50F5F1DC09D0700812603 /* Assets.xcassets */; };
 		D3D50F631DC09D0700812603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D50F611DC09D0700812603 /* LaunchScreen.storyboard */; };
+		D3D50F6B1DC0A21700812603 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F6A1DC0A21700812603 /* MainViewController.swift */; };
+		D3D50F6E1DC0B85700812603 /* autorNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F6D1DC0B85700812603 /* autorNewsTableViewController.swift */; };
+		D3D50F711DC0C28600812603 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F701DC0C28600812603 /* NoticeTableViewCell.swift */; };
+		D3D50F731DC0F53800812603 /* generalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F721DC0F53800812603 /* generalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3D50F551DC09D0700812603 /* kc-mbaas-Scoops-vohcan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kc-mbaas-Scoops-vohcan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D50F581DC09D0700812603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3D50F5A1DC09D0700812603 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3D50F5D1DC09D0700812603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3D50F5F1DC09D0700812603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3D50F621DC09D0700812603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3D50F641DC09D0700812603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D50F6A1DC0A21700812603 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		D3D50F6D1DC0B85700812603 /* autorNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = autorNewsTableViewController.swift; sourceTree = "<group>"; };
+		D3D50F701DC0C28600812603 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
+		D3D50F721DC0F53800812603 /* generalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = generalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		D3D50F571DC09D0700812603 /* kc-mbaas-Scoops-vohcan */ = {
 			isa = PBXGroup;
 			children = (
+				D3D50F6F1DC0C23400812603 /* views */,
+				D3D50F6C1DC0A29900812603 /* Controllers */,
 				D3D50F581DC09D0700812603 /* AppDelegate.swift */,
-				D3D50F5A1DC09D0700812603 /* ViewController.swift */,
 				D3D50F5C1DC09D0700812603 /* Main.storyboard */,
 				D3D50F5F1DC09D0700812603 /* Assets.xcassets */,
 				D3D50F611DC09D0700812603 /* LaunchScreen.storyboard */,
 				D3D50F641DC09D0700812603 /* Info.plist */,
 			);
 			path = "kc-mbaas-Scoops-vohcan";
+			sourceTree = "<group>";
+		};
+		D3D50F6C1DC0A29900812603 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3D50F6A1DC0A21700812603 /* MainViewController.swift */,
+				D3D50F6D1DC0B85700812603 /* autorNewsTableViewController.swift */,
+				D3D50F721DC0F53800812603 /* generalTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D3D50F6F1DC0C23400812603 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D3D50F701DC0C28600812603 /* NoticeTableViewCell.swift */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D50F5B1DC09D0700812603 /* ViewController.swift in Sources */,
+				D3D50F731DC0F53800812603 /* generalTableViewController.swift in Sources */,
+				D3D50F6E1DC0B85700812603 /* autorNewsTableViewController.swift in Sources */,
+				D3D50F711DC0C28600812603 /* NoticeTableViewCell.swift in Sources */,
 				D3D50F591DC09D0700812603 /* AppDelegate.swift in Sources */,
+				D3D50F6B1DC0A21700812603 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
