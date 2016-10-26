@@ -39,12 +39,18 @@ class generalTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "generalNoticeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "generalNoticeCell", for: indexPath) as! generalNoticeTableViewCell
 
-        cell.textLabel?.text = "Celda \(indexPath.item)"
+        //cell.textLabel?.text = "Celda \(indexPath.item)"
+       
+        cell.generalAutorLabel.text = "Autor General \(indexPath.row)"
+        cell.generalTituloLabel.text = "Noticia General \(indexPath.row)"
+
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
 
     /*
     // Override to support conditional editing of the table view.
