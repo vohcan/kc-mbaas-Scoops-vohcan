@@ -1,5 +1,5 @@
 //
-//  generalTableViewController.swift
+//  AllNewsTableViewController.swift
 //  kc-mbaas-Scoops-vohcan
 //
 //  Created by Nacho Villaverde Montalvo on 26/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class generalTableViewController: UITableViewController {
+class AllNewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class generalTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "generalNoticeCell", for: indexPath) as! generalNoticeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllNewCell", for: indexPath) as! AllNewTableViewCell
 
         //cell.textLabel?.text = "Celda \(indexPath.item)"
        

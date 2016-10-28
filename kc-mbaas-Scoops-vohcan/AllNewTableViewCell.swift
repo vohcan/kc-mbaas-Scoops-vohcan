@@ -1,5 +1,5 @@
 //
-//  generalNoticeTableViewCell.swift
+//  AllNewTableViewCell.swift
 //  kc-mbaas-Scoops-vohcan
 //
 //  Created by Nacho Villaverde Montalvo on 26/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class generalNoticeTableViewCell: UITableViewCell {
+class AllNewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var generalNoticeImageViewer: UIImageView!
     @IBOutlet weak var generalTituloLabel: UILabel!

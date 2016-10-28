@@ -1,5 +1,5 @@
 //
-//  newNoticiaViewController.swift
+//  AddNewViewController.swift
 //  kc-mbaas-Scoops-vohcan
 //
 //  Created by Nacho Villaverde Montalvo on 26/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class newNoticiaViewController: UIViewController {
+class AddNewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

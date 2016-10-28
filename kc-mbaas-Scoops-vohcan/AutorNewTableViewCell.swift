@@ -1,5 +1,5 @@
 //
-//  NoticeTableViewCell.swift
+//  AutorNewTableViewCell.swift
 //  kc-mbaas-Scoops-vohcan
 //
 //  Created by Nacho Villaverde Montalvo on 26/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoticeTableViewCell: UITableViewCell {
+class AutorNewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var noticeImageView: UIImageView!
     @IBOutlet weak var tituloLabel: UILabel!

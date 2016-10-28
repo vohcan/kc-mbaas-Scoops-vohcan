@@ -1,5 +1,5 @@
 //
-//  autorNewsTableViewController.swift
+//  AutorNewsTableViewController.swift
 //  kc-mbaas-Scoops-vohcan
 //
 //  Created by Nacho Villaverde Montalvo on 26/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class autorNewsTableViewController: UITableViewController {
+class AutorNewsTableViewController: UITableViewController {
 
     
     
@@ -42,7 +42,7 @@ class autorNewsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noticeCell", for: indexPath) as! NoticeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AutorNewCell", for: indexPath) as! AutorNewTableViewCell
 
         //cell.textLabel?.text = "Celda \(indexPath.item)"
         cell.autorLabel.text = "Autor \(indexPath.row)"
