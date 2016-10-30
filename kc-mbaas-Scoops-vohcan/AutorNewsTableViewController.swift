@@ -10,12 +10,8 @@ import UIKit
 
 class AutorNewsTableViewController: UITableViewController {
 
-    
-    
-    
-//    @IBAction func addNew(_ sender: AnyObject) {
-//    }
-    //let noticeCell = "noticeCell"
+        
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +26,9 @@ class AutorNewsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
 
     // MARK: - Table view data source
 

@@ -7,46 +7,66 @@
 //
 
 import UIKit
-import CoreImage
 
-class AddNewViewController: UIViewController {
-    //var model: String
+typealias newsRecord = Dictionary<String, AnyObject>
+
+class AddNewViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
    
-    @IBOutlet weak var tituloTxt: UITextField!
-//        didSet{
-//            guard let titulo = model["title"]as String else{
-//                return
-//            }
-//            tituloTxt.text = titulo
-//        }
     
-    @IBOutlet weak var autorTxt: UITextField!
-    @IBOutlet weak var contenidoTxt: UITextField!
+
+    var client: MSClient = MSClient(applicationURL: URL(string:"http://kcboot3vohcan-mobileapp.azurewebsites.net")!)
+    var model: newsRecord?
+
+   
     
+    @IBOutlet weak var photoView: UIImageView!
+    
+    @IBOutlet weak var titleField: UITextField!{
+        didSet{
+            guard let titleTxt = model?["title"] as! String? else{
+                return
+            }
+            titleField.text = titleTxt
+        }
+    }
+    
+    @IBOutlet weak var autorField: UITextField!{
+        didSet{
+            guard let autorTxt = model?["author"] as! String? else{
+                return
+            }
+            autorField.text = autorTxt
+        }
+    }
+
+    
+    @IBOutlet weak var contentField: UITextField!{
+        didSet{
+            guard let contentTxt = model?["content"] as! String? else{
+                return
+            }
+            contentField.text = contentTxt
+        }
+    }
+
     
     
     @IBAction func takePhoto(_ sender: AnyObject) {
         
-//        // Crear una instancia de UIImagePicker
-//        let picker = UIImagePickerController()
-//        
-//        // Configurarlo
-//        if UIImagePickerController.isCameraDeviceAvailable(.rear){
-//            picker.sourceType = .camera
-//        }else{
-//            // me conformo con el carrete
-//            picker.sourceType = .photoLibrary
-//        }
-//        
-//        
-//        picker.delegate = self
-//        
-//        // Mostrarlo de forma modal
-//        self.present(picker, animated: true) {
-//            // Por si quieres hacer algo nada más
-//            // mostrarse el picker
-//        }
-
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        self.present(picker, animated: true)
+    
+    }
+    
+    @IBAction func saveNew(_ sender: AnyObject) {
+        model!["title"] = titleField.text as AnyObject?
+        model!["author"] = autorField.text as AnyObject?
+        model!["content"] = contentField.text as AnyObject?
+        
+        addNews(
+)//"Prueba1", "autor1", "contenido de prueba", 0.5, 0.7)
     }
     
     override func viewDidLoad() {
@@ -60,7 +80,20 @@ class AddNewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //MARK: -  Insert in table news
+    func addNews(/*_ title:String, _ author: String, _ content: String,  _ longitude: Double,  _ latitude: Double*/){
+        
+        
+        let tableMS = client.table(withName: "news")
+        
+        tableMS.insert(["title": title, "author": autor, "content": content/*, "longitude": longitude, "latitude": latitude*/]) { (result, error) in
+            if let _ = error{
+                print (error)
+                return
+            }
+            print(result)
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -73,18 +106,4 @@ class AddNewViewController: UIViewController {
 
 }
 
-//MARK: - Delegates
-//
-//extension AddNewViewController: UIPickerViewDelegate, UINavigationControllerDelegate{
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        
-//        
-//       
-//        model.photo?.image = info[UIImagePickerControllerOriginalImage] as! UIImage?
-//        
-//        // Quitamos de enmedio al picker
-//        self.dismiss(animated: true) {
-//            //
-//        }
-//    }
-//}
+

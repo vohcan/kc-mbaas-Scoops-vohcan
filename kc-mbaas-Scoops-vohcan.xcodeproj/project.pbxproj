@@ -13,6 +13,8 @@
 		D3A27DC71DC4E75700016D9E /* AZSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A27DC61DC4E75700016D9E /* AZSClient.framework */; };
 		D3A27DCB1DC4E7B900016D9E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A27DCA1DC4E7B900016D9E /* libxml2.2.tbd */; };
 		D3A27DCF1DC4E80700016D9E /* FakeClassAzure.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A27DCE1DC4E80700016D9E /* FakeClassAzure.m */; };
+		D3A27DD11DC50C7200016D9E /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A27DD01DC50C7200016D9E /* MicrosoftAzureMobile.framework */; };
+		D3A27DD41DC50CF900016D9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A27DD31DC50CF900016D9E /* WebKit.framework */; };
 		D3D50F591DC09D0700812603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D50F581DC09D0700812603 /* AppDelegate.swift */; };
 		D3D50F5E1DC09D0700812603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D50F5C1DC09D0700812603 /* Main.storyboard */; };
 		D3D50F601DC09D0700812603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D50F5F1DC09D0700812603 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		D3A27DCC1DC4E80700016D9E /* kc-mbaas-Scoops-vohcan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kc-mbaas-Scoops-vohcan-Bridging-Header.h"; sourceTree = "<group>"; };
 		D3A27DCD1DC4E80700016D9E /* FakeClassAzure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeClassAzure.h; sourceTree = "<group>"; };
 		D3A27DCE1DC4E80700016D9E /* FakeClassAzure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeClassAzure.m; sourceTree = "<group>"; };
+		D3A27DD01DC50C7200016D9E /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		D3A27DD31DC50CF900016D9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D3D50F551DC09D0700812603 /* kc-mbaas-Scoops-vohcan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kc-mbaas-Scoops-vohcan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D50F581DC09D0700812603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D50F5D1DC09D0700812603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,7 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A27DD41DC50CF900016D9E /* WebKit.framework in Frameworks */,
 				D3A27DCB1DC4E7B900016D9E /* libxml2.2.tbd in Frameworks */,
+				D3A27DD11DC50C7200016D9E /* MicrosoftAzureMobile.framework in Frameworks */,
 				D3A27DC71DC4E75700016D9E /* AZSClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,24 +63,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D3A27DC81DC4E75D00016D9E /* frameworks */ = {
+		D3A27DD21DC50CF900016D9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3A27DD31DC50CF900016D9E /* WebKit.framework */,
+				D3A27DD01DC50C7200016D9E /* MicrosoftAzureMobile.framework */,
 				D3A27DCA1DC4E7B900016D9E /* libxml2.2.tbd */,
 				D3A27DC61DC4E75700016D9E /* AZSClient.framework */,
 				D3A27DCD1DC4E80700016D9E /* FakeClassAzure.h */,
 				D3A27DCE1DC4E80700016D9E /* FakeClassAzure.m */,
 				D3A27DCC1DC4E80700016D9E /* kc-mbaas-Scoops-vohcan-Bridging-Header.h */,
 			);
-			name = frameworks;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D3D50F4C1DC09D0700812603 = {
 			isa = PBXGroup;
 			children = (
-				D3A27DC81DC4E75D00016D9E /* frameworks */,
 				D3D50F571DC09D0700812603 /* kc-mbaas-Scoops-vohcan */,
 				D3D50F561DC09D0700812603 /* Products */,
+				D3A27DD21DC50CF900016D9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

@@ -68,7 +68,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q4A-2A-bLc" id="KgB-ja-ICb">
-                                    <frame key="frameInset" width="375" height="69"/>
+                                    <frame key="frameInset" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noticeImage" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-zm-Hxe">
@@ -137,7 +137,7 @@
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wr9-aZ-qrz">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRt-GG-8uw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRt-GG-8uw">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" red="0.09036651998758316" green="0.44737070798873901" blue="0.64740800857543945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -166,6 +166,11 @@
                             <constraint firstItem="wr9-aZ-qrz" firstAttribute="top" secondItem="aS8-6A-And" secondAttribute="bottom" constant="22" id="tHN-15-jh7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="autorLbl" destination="ycZ-iW-GAy" id="6s1-8e-B5D"/>
+                        <outlet property="contentLbl" destination="r0f-aX-d0y" id="WzO-nU-n7y"/>
+                        <outlet property="titleLbl" destination="bRt-GG-8uw" id="jGK-lj-1Vb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFv-Td-yXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mN8-Kd-bs4" id="EXI-CW-c5a">
-                                    <frame key="frameInset" width="375" height="69"/>
+                                    <frame key="frameInset" width="375" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noticeImage" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-6r-M8c">
@@ -272,7 +277,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vpq-vh-NbH">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vpq-vh-NbH">
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pon titulo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ax-Fu-MBu">
                                         <nil key="textColor"/>
@@ -305,15 +310,21 @@
                     <toolbarItems>
                         <barButtonItem systemItem="camera" id="ZJ1-KR-d1S">
                             <connections>
-                                <action selector="takePhoto:" destination="bfR-BJ-iPH" id="jYH-P4-00R"/>
+                                <action selector="takePhoto:" destination="bfR-BJ-iPH" id="2v6-B6-mFA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="XQJ-W8-JHQ"/>
-                        <barButtonItem systemItem="save" id="YNq-um-zzw"/>
+                        <barButtonItem systemItem="save" id="YNq-um-zzw">
+                            <connections>
+                                <action selector="saveNew:" destination="bfR-BJ-iPH" id="imj-dK-jzn"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <connections>
-                        <outlet property="autorTxt" destination="hre-iM-gLR" id="yTn-ym-Xvo"/>
-                        <outlet property="contenidoTxt" destination="e8e-87-XVD" id="E9a-Nf-mY9"/>
+                        <outlet property="autorField" destination="hre-iM-gLR" id="izZ-i2-7aD"/>
+                        <outlet property="contentField" destination="e8e-87-XVD" id="iMX-vc-JFE"/>
+                        <outlet property="photoView" destination="F6U-Jc-gLt" id="5bD-h2-29z"/>
+                        <outlet property="titleField" destination="9ax-Fu-MBu" id="0C6-6a-bby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhz-B0-GHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
